@@ -23,7 +23,7 @@ Los tests del dominio los podemos ver en los siguientes ficheros:
 Para esta proyecto realizado con [Node.js][2], [express][3] y [MongoDB][4], necesitamos:
 
 * Levantar un mongoDB en el puerto 27017 local.
-* Lanzar el script `npm start`.
+* Lanzar el script `npm start`. En caso de querer levantar un hot reloading, lanzar `npm start:dev`.
 
 [1]: /test/domain/hello/hello.greet.spec.js
 [2]: https://nodejs.org/es/
