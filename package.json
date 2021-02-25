@@ -1,0 +1,34 @@
+{
+  "name": "clean-architecture-tdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "test": "mocha -u bdd --recursive",
+    "coverage": "nyc npm t  && nyc report --report-dir=coverage --reporter=html --reporter=lcov",
+    "sonar": "node_modules/sonar-scanner/bin/sonar-scanner",
+    "sonarcloud": "node_modules/sonar-scanner/bin/sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=apecr-github",
+    "init-eslint": "eslint --init"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "eslint": "^7.20.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^8.3.0",
+    "mongodb-memory-server": "^6.9.3",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
+    "sonar-scanner": "^3.1.0",
+    "supertest": "^6.1.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongoose": "5.11.15"
+  }
+}

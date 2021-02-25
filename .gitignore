@@ -1,0 +1,9 @@
+node_modules
+test-reports
+.scannerwork
+coverage
+
+yarn-error.log
+
+package-lock.json
+.nyc_output

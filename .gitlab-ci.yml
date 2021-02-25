@@ -1,0 +1,26 @@
+image: timbru31/java-node:11-jdk-14
+
+cache:
+  paths:
+  - node_modules/
+
+variables:
+  SONAR_HOST_URL: "https://sonarcloud.io"
+ 
+
+install:
+  stage: build
+  script:
+    - npm install
+
+test:
+  stage: test
+  script:
+    - npm test
+
+coverage-and-sonarqube:
+  stage: .post
+  script:
+    - npm run coverage
+    - npm run sonarcloud
+  allow_failure: true
